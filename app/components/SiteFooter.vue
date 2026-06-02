@@ -13,6 +13,14 @@
         <!-- <NuxtLink :to="localePath('/privacy')" class="footer-link">隐私声明</NuxtLink>
         <NuxtLink :to="localePath('/cookies')" class="footer-link">Cookie声明</NuxtLink> -->
       </nav>
+      <div class="footer-icp">
+        <a
+          href="https://beian.miit.gov.cn/#/Integrated/index"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="footer-icp-link"
+        >{{ t("layout.footer.icp") }}</a>
+      </div>
     </div>
   </footer>
 </template>
@@ -81,5 +89,21 @@ const localePath = useLocalePath();
 
 .footer-link:hover {
   opacity: 0.85;
+}
+
+.footer-icp {
+  text-align: center;
+  margin-top: -0.5rem;
+}
+
+.footer-icp-link {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 12px;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.footer-icp-link:hover {
+  color: #fff;
 }
 </style>
